@@ -149,7 +149,100 @@ span {
     font-size: 2.7rem; /*Test*/
 }
 
-.home-content p , .about-content p {
+.home-content p, .about-content p {
     margin-top: 1.2rem;
     text-align: justify;
 }
+
+.service h2, .project h2, .contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.service-conteiner {
+    display: fles;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.service-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25rem;
+    margin-bottom: 1rem;
+}
+
+.service-conteiner .service-box, .service-tools{
+    padding: 2rem 1rem 2.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: solid 0.15rem var(--bg-color-01);
+    background-color: var(--bg-color-02);
+    transition: 0.5s ease;
+}
+
+.service-conteiner .service-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.01);
+}
+
+.service-tools:hover {
+    border-color: var(--main-color);
+    transform: scale(1.01);
+}
+
+.service-box i {
+    font-size: 4.3rem;
+    color: var(--main-color);
+}
+
+.service-tools i {
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin: 0 1.0rem;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+}
+
+.service-box p {
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    /*N linhas ...*/
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tools i {
+    display:inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ---- button ----- */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    color: var(--bg-color-02);
+    font-weight: 600;
+    letter-spacing: 0.1rem; 
+    transition: 0.3s ease;
+    margin-top: 1.2rem;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0.3rem var(--main-color);
+    background-color: inherit; /*Herda cor do fundo*/
+    color: var(--main-color);
+    cursor: pointer;
+}
+/* ---- /button ----- */
