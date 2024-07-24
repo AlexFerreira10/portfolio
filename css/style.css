@@ -50,7 +50,7 @@ header {
     align-items: center;
     z-index: 100;
 
-    border: solid 1px var(--color-01); /*test*/
+    /*border: solid 1px var(--color-01); /*test*/
 }
 
 .logo {
@@ -66,7 +66,7 @@ header {
     padding: 0.5rem 1rem;
     transition: 0.4s;
 
-    border: solid 1px var(--color-02); /*test*/
+    /*border: solid 1px var(--color-02); /*test*/
 }
 
 .nav a:hover {
@@ -77,7 +77,7 @@ section {
     min-height: 100vh;
     padding: 6rem 6rem 2rem;
 
-    border: solid 1px var(--color-02); /*test*/
+    /*border: solid 1px var(--color-02); /*test*/
 }
 
 span {
@@ -98,13 +98,13 @@ span {
 }
 
 .home-img {
-    margin-top: -100px;
+    margin-top: -75px;
     margin-left: 30px;
 }
 
 .home-img img {
-    width: 200px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 200px; 
+    height: auto; 
     border-right: solid 0.6rem var(--main-color);
     border-bottom: solid 0.6rem var(--main-color);
     border-image-source: linear-gradient(135deg, transparent 50%, var(--main-color));
@@ -124,8 +124,8 @@ span {
 }
 
 .home-img img, .about-img img {
-    width: 80%; /* Ajuste o tamanho das imagens conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 80%; 
+    height: auto; 
     align-self: center;
 }
 
@@ -298,7 +298,6 @@ span {
     color: var(--bg-color-02);
 }
 
-
 /* ---- /project Section ---- */
 
 
@@ -311,7 +310,7 @@ form {
     margin-bottom: 2rem;
 
 
-    border: solid 1px var(--color-02); /*test*/
+    /*border: solid 1px var(--color-02); /*test*/
 }
 
 form .input-box input,
@@ -324,7 +323,7 @@ form textarea {
     border-radius: 0.5rem;
     margin: 0.4rem 0;
 
-    border: solid 1px var(--color-02); /*test*/
+    /*border: solid 1px var(--color-02); /*test*/
     
 }
 
@@ -333,7 +332,6 @@ form textarea {
 }
 
 /* ---- contact Section ---- */
-
 
 /* ---- footer ---- */
 footer {
@@ -344,6 +342,57 @@ footer {
     padding: 1.2rem;
     background: var(--bg-color-01);
 }
+/* ---- footer ---- */
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: solid 0.15rem var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 1.3rem 0.5rem;
+    transition: 0.5s ease;
+}
+
+.social-media a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color-02);
+    box-shadow: 0 0 0.3rem var(--main-color);
+}
+
+
+/* ---- Menu Hamburguer ---- */
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: var(--text-color);
+    margin: 0.4rem 0;
+    transition: 0.3s ease;
+}
+
+.change .bart1 {
+    transform: translate(0, 0.65rem) rotate(-45deg);
+}
+
+.change .bart2 {
+    opacity: 0;
+}
+
+.change .bart3 {
+    transform: translate(0, -0.65rem) rotate(+45deg);
+}
+
+/* ---- /Menu Hamburguer ---- */
 
 /* ---- button ----- */
 .btn {
