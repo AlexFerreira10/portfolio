@@ -118,16 +118,16 @@ span {
 }
 
 .home-img {
-    margin-top: -20px;
+    margin-top: -130px;
     margin-left: 30px;
 }
 
 .home-img img {
-    width: 200px; 
+    width: 150px; 
     height: auto; 
-    border-right: solid 0.6rem var(--main-color);
+   /* border-right: solid 0.6rem var(--main-color);
     border-bottom: solid 0.6rem var(--main-color);
-    border-image-source: linear-gradient(135deg, transparent 50%, var(--main-color));
+    border-image-source: linear-gradient(135deg, transparent 50%, var(--main-color)); */
     border-image-slice: 1;
 } 
 
@@ -151,6 +151,10 @@ span {
 
 .about {
     background-color: var(--bg-color-02);
+}
+
+.home-content {
+    padding-left: 7rem;
 }
 
 .home-content, .about-content {
