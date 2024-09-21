@@ -149,10 +149,6 @@ span {
     align-self: center;
 }
 
-.about {
-    background-color: var(--bg-color-02);
-}
-
 .home-content {
     padding-left: 7rem;
 }
@@ -407,39 +403,6 @@ span {
 
 /* ---- /project Section ---- */
 
-
-/* ---- contact Section ---- */
-
-form {
-    max-width: 45rem;
-    margin: 0.6rem auto; /*Centraliza no meio*/
-    text-align: center;
-    margin-bottom: 2rem;
-
-
-    /*border: solid 1px var(--color-02); /*test*/
-}
-
-form .input-box input,
-form textarea {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    color: var(--text-color);
-    background-color: var(--bg-color-02);
-    border-radius: 0.5rem;
-    margin: 0.4rem 0;
-
-    /*border: solid 1px var(--color-02); /*test*/
-    
-}
-
-form textarea {
-    resize: none;
-}
-
-/* ---- contact Section ---- */
-
 /* ---- footer ---- */
 footer {
     display: flex;
@@ -447,7 +410,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 1.2rem;
-    background: var(--bg-color-01);
+    background: var(--bg-color-02);
 }
 /* ---- footer ---- */
 
@@ -521,6 +484,7 @@ footer {
     cursor: pointer;
 }
 /* ---- /button ----- */
+
 
 /* ****** media query ******/
 
