@@ -258,7 +258,7 @@ span {
 }
 
 .service-conteiner .service-box, .service-tools{
-    padding: 2rem 1rem 2.5rem;
+    padding: 2rem 2rem 2.5rem; 
     border-radius: 1.2rem;
     text-align: center;
     border: solid 0.15rem var(--bg-color-01);
@@ -311,6 +311,20 @@ span {
     display:inline-block;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.service-summary {
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    display: block; 
+}
+
+.service-full {
+    display: none; /* Inicialmente escondido */
+}
+
+.hidden {
+    display: none; 
 }
 
 /* ---- project Section ---- */
