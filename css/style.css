@@ -118,8 +118,8 @@ span {
 }
 
 .home-img {
-    margin-top: -130px;
-    margin-left: 30px;
+    margin-top: -150px;
+    margin-right: 30px;
 }
 
 .home-img img {
@@ -128,7 +128,6 @@ span {
    /* border-right: solid 0.6rem var(--main-color);
     border-bottom: solid 0.6rem var(--main-color);
     border-image-source: linear-gradient(135deg, transparent 50%, var(--main-color)); */
-    border-image-slice: 1;
 } 
 
 .about-img {
@@ -144,13 +143,12 @@ span {
 }
 
 .home-img img, .about-img img {
-    width: 80%; 
-    height: auto; 
-    align-self: center;
+    width: 100%; 
 }
 
 .home-content {
     padding-left: 7rem;
+    flex: 1;
 }
 
 .home-content, .about-content {
@@ -253,12 +251,12 @@ span {
     flex-direction: column;
     justify-content: space-between;
     min-height: 25rem;
-    min-width: 50rem;
+    min-width: auto;
     margin-bottom: 1rem;
 }
 
 .service-conteiner .service-box, .service-tools{
-    padding: 2rem 2rem 2.5rem; 
+    padding: 2rem 1rem 2.5rem; 
     border-radius: 1.2rem;
     text-align: center;
     border: solid 0.15rem var(--bg-color-01);
@@ -267,7 +265,8 @@ span {
 }
 
 .service-tools {
-    min-width: 50rem;
+    min-height: auto;
+    max-width: auto;
 }
 
 .service-conteiner .service-box:hover {
@@ -316,7 +315,6 @@ span {
 .service-summary {
     margin: 0.5rem;
     letter-spacing: 0.1rem;
-    display: block; 
 }
 
 .service-full {
@@ -396,8 +394,6 @@ span {
 
 .project-layer p {
     margin: 0.2rem 0 0.5rem;
-    font-weight: 600;
-
 }
 
 .project-layer a {
@@ -526,36 +522,33 @@ footer {
     .home, .about {
         flex-direction: column;
         gap: 1.2rem;
-
     }
 
-    .home-img, .about-img {
-        max-width: 80%;
-        max-height: 80%;
+    .home-img {
+        max-width: 70%;
+        max-height: 70%;
+        margin-top: -20px;
+        margin-bottom: -60px;
+    }
+
+    .about-img {
         display: none;
     }
 
     .home-content, .about-content {
         width: 100%;
-        align-content: center;
+        padding: 2rem;
     }
 
     .home-content div {
         text-align: center;
+        align-items: center;
     }
 
     .home-content h1, .about-content h1 {
         font-size: 2.2rem;
         font-weight: 700;
-        line-height: 1.3rem;
-    }
-
-    .home-content h1, .home-content h2, .home-content h3,
-    .about-content h1, .about-content h2, .about-content h3 {
-        text-align: center; 
-        margin-top: 1rem; 
-        margin-bottom: 1rem; 
-        letter-spacing: 0.1rem; 
+        line-height: 1.3;
     }
 
     .service-conteiner {
@@ -575,13 +568,18 @@ footer {
 /* ----- Small (sm) Smartphone (landscape) */
 @media (min-width : 576px) {
    
-    .home-img, .about-img {
-        max-width: 40%;
-        max-height: 65%;
+    .home-img {
+        width: 60%;
+        max-height: auto;
     }
 
     .service-box {
         width: 70%;
+    }
+
+    .home-content, .about-content {
+        width: 80%;
+        order: 1;
     }
     
     header {
@@ -590,7 +588,7 @@ footer {
 }
 
 /* ----- Medium (md) Tablet */
-@media (min-width : 768px) {
+@media (min-width : 812px) {
    
     .menu-hamburguer {
         display: none;
@@ -609,27 +607,25 @@ footer {
         justify-content: space-evenly;
     }
 
-    .home-img, .about-img {
+    .home-img {
         max-width: 45%;
-        padding-top: 2.5rem;
+        max-height: auto;
         order: 2;
-        display: block;
+        margin-top: -318px;
     }
 
     .home-content, .about-content {
-        width: 50%;
-        margin-bottom: 0.9rem; 
-        margin-top: 0.9rem;
+        width: 80%;
         order: 1;
     }
-
+/*
     .home-content h1, .home-content h2, .home-content h3,
     .about-content h1, .about-content h2, .about-content h3 {
         text-align:justify;
         margin-top: 1rem; 
         margin-bottom: 1rem; 
         letter-spacing: 0.1rem; 
-    }
+    } */
 
     .service-box {
         width: 60%;
@@ -650,24 +646,45 @@ footer {
 }
 
 /* ----- Large (lg) Notbook */
-@media (min-width : 992px) {
-   
-    .home-img, .about-img {
-        max-width: 45%;
-        order: 2;
+@media (min-width : 932px) {
+
+    .service-conteiner {
+        gap: 1.2rem
     }
-    
+
+    .home-img {
+        width: 40%;
+        display: block;
+        margin-top: -255px;
+    }
+
     header {
         background-color: var(--color-04); /* Teste */
     }
 }
 
 /* ----- Extra Large (xl) Desktop */
-@media (min-width : 1200px) {
-   
-    .home-img, .about-img {
-        max-width: 50%;
+@media (min-width : 1100px) {
+    
+    .home-img {
+        max-width: 35%;
+        order:2;
+    }
+
+    .about-img {
+        max-width: 30%;
+        height: auto;
         order: 2;
+        display: block;
+        margin-bottom: -20px;
+    }
+
+    .about-content {
+        width: 50%;
+    }
+
+    .home-img {
+        margin-top: -210px;
     }
    
     .home-content h1 {
@@ -677,7 +694,7 @@ footer {
     .home-content h3 {
         font-size: 2rem;
     }
-   
+
     header {
         background-color: var(--color-05);  /* Teste */
     }
