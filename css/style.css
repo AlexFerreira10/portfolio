@@ -252,7 +252,7 @@ span {
     padding: 2rem 1rem 2.5rem; 
     border-radius: 1.2rem;
     max-width: 50rem; 
-    width: 100%; /* Aqui definimos que a largura vai acompanhar o container */
+    width: 100%; 
     text-align: center;
     border: solid 0.15rem var(--bg-color-01);
     background-color: var(--bg-color-02);
@@ -365,7 +365,7 @@ span {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 4rem;
+    padding: 0.75rem;
     transform: translateY(30rem);
     transition: 0.5s ease;
 }
@@ -387,31 +387,36 @@ span {
     transform: translateY(0);
 }
 
-
 .project-layer h4 {
-    font-size: 1.8rem
-    
+    font-size: calc(1.2rem + 4.0%); /* Ajusta o tamanho do título com base na largura do layer */
+    text-align: center;
+    padding: 0.5rem;
 }
 
 .project-layer p {
-    margin: 0.2rem 0 0.5rem;
+    font-size: calc(0.8rem + 3.0%); /* Ajusta o tamanho do parágrafo com base na largura do layer */
+    text-align: justify;
 }
 
 .project-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
+    width: calc(2rem + 2%); /* Largura do botão em relação ao layer */
+    height: calc(2rem + 2%); /* Altura do botão em relação ao layer */
+    min-width: 1.5rem; 
+    min-height: 1.5rem; 
+    max-width: 3rem; 
+    max-height: 3rem; 
     background: var(--text-color);
-    border-radius: 50%;
+    border-radius: 50%; /* Mantém o arredondamento */
+    margin-top: 1rem;
 }
 
 .project-layer a i {
     font-size: 1.2rem;
     color: var(--bg-color-02);
 }
-
 /* ---- /project Section ---- */
 
 /* ---- footer ---- */
