@@ -174,63 +174,81 @@ span {
 
 .experience {
     background-color: var(--bg-color-02);
+
 }
 
-.experience-conteiner {
+.experience-container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    gap: 2rem; 
+    align-items: center;
+    gap: 2rem; /* Espaçamento entre os itens de experiência */
+    justify-content: space-evenly;
 }
 
 .experience-item {
-    padding: 2rem; 
     border-radius: 1.2rem; 
+    padding: 2rem 1rem 2.5rem; 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    border: solid 0.15rem var(--bg-color-02);
     background-color: var(--bg-color-01);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease, border-color 0.5s ease; 
-    max-width: 50rem; 
-    width: 100%; /* Para garantir que não exceda o container pai */
-    margin: 0 auto; 
-    border: solid 0.15rem transparent; /* Borda transparente para evitar movimento */
-    box-sizing: border-box; 
+    transition: 0.5s ease;
+    max-width: 50rem;
+    width: 100%; /* Garante que não exceda o container pai */
+    margin: 1rem 0; /* Adiciona espaçamento vertical entre os boxes */
+    border: solid 0.15rem transparent;
+    box-sizing: border-box;
+    overflow: hidden; /* Garante que o conteúdo não saia do frame */
+}
+
+.experience-box {
+    border-color: var(--main-color);
+    transform: scale(1.01);
 }
 
 .experience-img {
-    flex: 0 0 100px; /* Mantendo um tamanho fixo para as logos */
-    margin-right: 1.5rem; /* Espaço entre a imagem e o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .experience-img img {
     width: 100%;
     height: auto;
-    border-radius: 50%; 
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .experience-box {
     flex: 1;
-}
-
-.experience-item:hover {
-    border-color: var(--main-color); 
-    transform: scale(1.01); 
+    width: 100%;
+    overflow: hidden; /* Garante que o conteúdo que exceder o limite seja cortado */
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+    word-wrap: break-word; /* Quebra palavras grandes */
 }
 
 .experience-box p {
-    margin: 0.5rem 0; 
+    margin: 0.5rem 0;
     font-size: 1rem;
     color: var(--text-color);
+    line-height: 1.5; /* Espaçamento melhor entre linhas */
 }
 
 .experience-box h3 {
-    margin: 0.5rem 0; 
+    margin: 0.5rem 0;
     font-size: 1.3rem;
     color: var(--text-color);
     font-weight: bold;
 }
+
+.experience-item:hover {
+    border-color: var(--main-color);
+    transform: scale(1.01);
+}
+
+
 /* ---- /experience Section ------- */
 
 /* ---- service Section ----*/
@@ -267,16 +285,6 @@ span {
 }
 
 .service-conteiner .service-box:hover, .service-tools:hover {
-    border-color: var(--main-color);
-    transform: scale(1.01);
-}
-
-.service-conteiner .service-box:hover {
-    border-color: var(--main-color);
-    transform: scale(1.01);
-}
-
-.service-tools:hover {
     border-color: var(--main-color);
     transform: scale(1.01);
 }
@@ -349,6 +357,7 @@ span {
     display: flex;
     width: 100%;
     max-width: 35rem; 
+    min-height: 15rem;
     height: auto; 
     aspect-ratio: 16 / 12; /* Mantém a proporção */
 }
@@ -562,6 +571,23 @@ footer {
         font-weight: 700;
         line-height: 1.3;
     }
+
+    .experience-img {
+        width: 30%; /* Centraliza e ajusta a imagem no mobile */
+        margin-bottom: 0.5rem; /* Espaçamento entre imagem e texto */
+    }
+
+    .experience-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%; /* Imagem redonda */
+        object-fit: cover;
+    }
+
+    .experience-box {
+        width: 100%;
+    }
+
 /*
     header {
         background-color: var(--color-01); Teste 
@@ -570,7 +596,13 @@ footer {
 
 /* ----- Small (sm) Smartphone (landscape) */
 @media (min-width : 576px) {
-   
+
+    .home-content h1, .about-content h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
     .home-img {
         width: 45%;
         max-height: auto;
@@ -580,6 +612,12 @@ footer {
         width: 80%;
         order: 1;
     }
+
+    .experience-img {
+        width: 25%;
+    }
+
+
    
     /*
     header {
@@ -622,6 +660,25 @@ footer {
     form .input-box input {
         width: 49%;
     }
+
+      .experience-item {
+        flex-direction: row; /* Lado a lado para telas maiores */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .experience-img {
+        width: 15%; /* Ajusta o tamanho da imagem */
+        margin-right: 1.5rem; /* Espaçamento entre imagem e texto */
+        margin-bottom: 0; /* Remove margem inferior */
+    }
+
+    .experience-box {
+        width: 60%; /* Ajusta a largura do texto */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+
    /*
     header {
         background-color: var(--color-03); Teste 
@@ -647,6 +704,15 @@ footer {
 
     .project-container {
         grid-template-columns: auto auto;
+    }
+
+    .experience-item {
+        max-width: 50rem;
+        margin: 2rem auto;
+    }
+
+    .experience-box {
+        width: 65%;
     }
 
     /* 
@@ -682,6 +748,10 @@ footer {
 
     .home-content h3 {
         font-size: 2rem;
+    }
+    
+    .experience-box {
+        width: 70%;
     }
 
     /* 
