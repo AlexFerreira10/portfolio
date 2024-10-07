@@ -308,16 +308,23 @@ span {
 .service-box p {
     margin: 0.5rem;
     letter-spacing: 0.1rem;
-    /*N linhas ...*/
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: max-height 0.5s ease;
+    max-height: 6rem; 
+}
+
+.service-box p.expanded {
+    display: block;
+    max-height: none; /* Remove o limite quando expandido */
+    -webkit-line-clamp: none;
 }
 
 .tools i {
-    display:inline-block;
+    display: inline-block;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -357,7 +364,7 @@ span {
     display: flex;
     width: 100%;
     max-width: 35rem; 
-    min-height: 15rem;
+    min-height: 20rem;
     height: auto; 
     aspect-ratio: 16 / 12; /* Mantém a proporção */
 }
@@ -592,6 +599,75 @@ footer {
     header {
         background-color: var(--color-01); Teste 
     } */
+}
+
+@media (max-width : 320px)  {
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    .home {
+        padding: 6rem 0.8rem;
+    }
+
+    .service, .project, .contact, .experience, .about {
+        padding: 2rem 0.8rem;
+    }
+
+    .service h2, .project h2, .contact h2, .experience h2 {
+        font-size: 1.6rem;
+    }
+
+    .social-media a {
+        font-size: 1.6rem;
+    }
+
+    .home-content h3, .about-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .home-content h1, .about-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-content p, .about-content p {
+        font-size: 1rem;
+    }
+
+    .experience-box p {
+        font-size: 0.9rem;
+    }
+    
+    .experience-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-box i {
+        font-size: 3.0rem;
+    }
+    
+    .service-tools i {
+        font-size: 2.0rem;
+    }
+    
+    .service-box h3, .service-tools {
+        font-size: 1.1rem;
+    }
+    
+    .service-box p {
+        text-align: justify;
+        font-size: 0.9rem;
+        word-spacing: -0.2rem; 
+    }
+
+    .project-layer h4 {
+        font-size: 1rem;
+    }
+    
+    .project-layer p {
+        font-size: 0.7rem;
+    }
 }
 
 /* ----- Small (sm) Smartphone (landscape) */
